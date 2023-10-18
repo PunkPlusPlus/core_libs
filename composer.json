@@ -1,7 +1,7 @@
 {
     "name": "iddev/private-http-client",
     "type": "library",
-    "version": "1.0.0",
+    "version": "1.0.0.0",
     "autoload": {
         "psr-4": {
             "Iddev\\PrivateHttpClient\\": "src/"
