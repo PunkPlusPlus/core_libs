@@ -16,11 +16,12 @@ class PrivateHttpClient extends PendingRequest
         $this->redisClient = new RedisClient();
     }
     
-    public function withAuth()
+    public function withAuth(): PendingRequest
     {
         $tokenType = 'Bearer';
         $token = $this->getToken();
         $this->withToken($token, $tokenType);
+        return $this;
     }
 
     public function getToken(): string
