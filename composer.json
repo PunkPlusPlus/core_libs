@@ -14,7 +14,7 @@
         }
     ],
     "require": {
-        "illuminate/http": "^v10.28.0",
+        "illuminate/http": "v10.28.0",
         "predis/predis": "^2.2"
     }
 }
