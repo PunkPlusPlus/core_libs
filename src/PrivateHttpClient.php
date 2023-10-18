@@ -2,8 +2,6 @@
 
 namespace Iddev\PrivateHttpClient;
 
-require_once __DIR__ . '/../vendor/autoload.php';
-
 use Illuminate\Http\Client\PendingRequest;
 use Predis\Client as RedisClient;
 
