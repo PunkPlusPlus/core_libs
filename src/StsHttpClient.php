@@ -17,7 +17,7 @@ class StsHttpClient extends HttpClient
         ]);
     }
 
-    public function request(string $method, $uri='', array $options = []): Psr\Http\Message\ResponseInterface
+    public function request(string $method, $uri='', array $options = []): \Psr\Http\Message\ResponseInterface
     {
         $options[RequestOptions::SYNCHRONOUS] = true;
 
