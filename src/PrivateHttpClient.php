@@ -13,7 +13,9 @@ class PrivateHttpClient extends PendingRequest
     public function __construct($factory = null, $middleware = [])
     {
         parent::__construct($factory, $middleware);
-        $this->redisClient = new RedisClient();
+        $this->redisClient = new RedisClient([
+            'host' => env('REDIS_HOST'),
+        ]);
     }
     
     public function withAuth(): PendingRequest
