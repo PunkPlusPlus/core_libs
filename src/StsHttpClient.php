@@ -25,7 +25,7 @@ class StsHttpClient extends HttpClient
             'Authorization' => $this->getToken(),
         ];
 
-        return $this->requestAsync($method, $uri, $options)->wait();
+        return $this->requestAsync($method, $uri = '', $options)->wait();
     }
 
     public function getToken(): string
