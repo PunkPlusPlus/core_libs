@@ -17,7 +17,7 @@ class StsHttpClient extends HttpClient
         ]);
     }
 
-    public function request(string $method, $uri, array $options = [])
+    public function request(string $method, $uri='', array $options = [])
     {
         $options[RequestOptions::SYNCHRONOUS] = true;
 
@@ -25,7 +25,7 @@ class StsHttpClient extends HttpClient
             'Authorization' => $this->getToken(),
         ];
 
-        return $this->requestAsync($method, $uri = '', $options)->wait();
+        return $this->requestAsync($method, $uri, $options)->wait();
     }
 
     public function getToken(): string
