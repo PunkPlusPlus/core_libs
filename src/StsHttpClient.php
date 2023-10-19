@@ -37,7 +37,7 @@ class StsHttpClient extends HttpClient
 
     public function updateToken(): string
     {
-        $stsTokenUrl = env('STS_ENDPOINT') . '/beeon/connect/token';
+        $stsTokenUrl = env('STS_ENDPOINT') . 'beeon/connect/token';
         $response = parent::request('POST', $stsTokenUrl, [
             'headers' => [
                 'Content-Type' => 'application/x-www-form-urlencoded'
